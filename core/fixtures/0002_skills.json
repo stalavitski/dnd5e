@@ -1,0 +1,146 @@
+[
+  {
+    "model": "core.Skill",
+    "pk": 1,
+    "fields": {
+      "ability": 1,
+      "name": "Athletics"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 2,
+    "fields": {
+      "ability": 2,
+      "name": "Acrobatics"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 3,
+    "fields": {
+      "ability": 2,
+      "name": "Sleight of Hand"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 4,
+    "fields": {
+      "ability": 2,
+      "name": "Stealth"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 5,
+    "fields": {
+      "ability": 4,
+      "name": "Arcana"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 6,
+    "fields": {
+      "ability": 4,
+      "name": "History"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 7,
+    "fields": {
+      "ability": 4,
+      "name": "Investigation"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 8,
+    "fields": {
+      "ability": 4,
+      "name": "Nature"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 9,
+    "fields": {
+      "ability": 4,
+      "name": "Religion"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 10,
+    "fields": {
+      "ability": 5,
+      "name": "Animal Handling"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 11,
+    "fields": {
+      "ability": 5,
+      "name": "Insight"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 12,
+    "fields": {
+      "ability": 5,
+      "name": "Medicine"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 13,
+    "fields": {
+      "ability": 5,
+      "name": "Perception"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 14,
+    "fields": {
+      "ability": 5,
+      "name": "Survival"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 15,
+    "fields": {
+      "ability": 6,
+      "name": "Deception"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 16,
+    "fields": {
+      "ability": 6,
+      "name": "Intimidation"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 17,
+    "fields": {
+      "ability": 6,
+      "name": "Performance"
+    }
+  },
+  {
+    "model": "core.Skill",
+    "pk": 18,
+    "fields": {
+      "ability": 6,
+      "name": "Persuasion"
+    }
+  }
+]

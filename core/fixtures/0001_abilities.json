@@ -1,0 +1,44 @@
+[
+  {
+    "model": "core.Ability",
+    "pk": 1,
+    "fields": {
+      "name": "Strength"
+    }
+  },
+  {
+    "model": "core.Ability",
+    "pk": 2,
+    "fields": {
+      "name": "Dexterity"
+    }
+  },
+  {
+    "model": "core.Ability",
+    "pk": 3,
+    "fields": {
+      "name": "Constitution"
+    }
+  },
+  {
+    "model": "core.Ability",
+    "pk": 4,
+    "fields": {
+      "name": "Intelligence"
+    }
+  },
+  {
+    "model": "core.Ability",
+    "pk": 5,
+    "fields": {
+      "name": "Wisdom"
+    }
+  },
+  {
+    "model": "core.Ability",
+    "pk": 6,
+    "fields": {
+      "name": "Charisma"
+    }
+  }
+]

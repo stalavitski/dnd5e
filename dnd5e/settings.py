@@ -37,7 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'profiles',
+    # 3rd party tools
+    'debug_toolbar',
+    'django_paranoid',
+    'rest_framework',
+    # Local apps
+    'core',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'dnd5e.urls'
@@ -76,8 +83,12 @@ WSGI_APPLICATION = 'dnd5e.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dnd5e',
+        'USER': 'saleor',
+        'PASSWORD': 'saleor',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -122,4 +133,9 @@ STATIC_URL = '/static/'
 
 
 # Custom User model
-AUTH_USER_MODEL = 'profiles.User'
+AUTH_USER_MODEL = 'users.User'
+
+# The Debug Toolbar is shown only if your IP address is listed in the INTERNAL_IPS setting
+INTERNAL_IPS = [
+    '127.0.0.1'
+]

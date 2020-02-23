@@ -1,0 +1,51 @@
+[
+  {
+    "model": "core.Dice",
+    "pk": 1,
+    "fields": {
+      "sides": 4
+    }
+  },
+  {
+    "model": "core.Dice",
+    "pk": 2,
+    "fields": {
+      "sides": 6
+    }
+  },
+  {
+    "model": "core.Dice",
+    "pk": 3,
+    "fields": {
+      "sides": 8
+    }
+  },
+  {
+    "model": "core.Dice",
+    "pk": 4,
+    "fields": {
+      "sides": 10
+    }
+  },
+  {
+    "model": "core.Dice",
+    "pk": 5,
+    "fields": {
+      "sides": 12
+    }
+  },
+  {
+    "model": "core.Dice",
+    "pk": 6,
+    "fields": {
+      "sides": 20
+    }
+  },
+  {
+    "model": "core.Dice",
+    "pk": 7,
+    "fields": {
+      "sides": 100
+    }
+  }
+]
