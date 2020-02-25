@@ -11,6 +11,6 @@ class DiceTestCase(TestCase):
 
         for i in range(1, 100):
             roll = dice.roll()
-            # Roll should be in the range [1, num od the Dice sides]
+            # Roll should be in the range [1, num of the Dice sides]
             self.assertLessEqual(roll, dice.sides)
             self.assertGreaterEqual(roll, 1)
