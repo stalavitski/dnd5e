@@ -4,7 +4,9 @@
     "pk": 1,
     "fields": {
       "ability": 1,
-      "name": "Athletics"
+      "created_at": "2020-01-20 00:00",
+      "name": "Athletics",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -12,7 +14,9 @@
     "pk": 2,
     "fields": {
       "ability": 2,
-      "name": "Acrobatics"
+      "created_at": "2020-01-20 00:00",
+      "name": "Acrobatics",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -20,7 +24,9 @@
     "pk": 3,
     "fields": {
       "ability": 2,
-      "name": "Sleight of Hand"
+      "created_at": "2020-01-20 00:00",
+      "name": "Sleight of Hand",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -28,7 +34,9 @@
     "pk": 4,
     "fields": {
       "ability": 2,
-      "name": "Stealth"
+      "created_at": "2020-01-20 00:00",
+      "name": "Stealth",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -36,7 +44,9 @@
     "pk": 5,
     "fields": {
       "ability": 4,
-      "name": "Arcana"
+      "created_at": "2020-01-20 00:00",
+      "name": "Arcana",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -44,7 +54,9 @@
     "pk": 6,
     "fields": {
       "ability": 4,
-      "name": "History"
+      "created_at": "2020-01-20 00:00",
+      "name": "History",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -52,7 +64,9 @@
     "pk": 7,
     "fields": {
       "ability": 4,
-      "name": "Investigation"
+      "created_at": "2020-01-20 00:00",
+      "name": "Investigation",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -60,7 +74,9 @@
     "pk": 8,
     "fields": {
       "ability": 4,
-      "name": "Nature"
+      "created_at": "2020-01-20 00:00",
+      "name": "Nature",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -68,7 +84,9 @@
     "pk": 9,
     "fields": {
       "ability": 4,
-      "name": "Religion"
+      "created_at": "2020-01-20 00:00",
+      "name": "Religion",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -76,7 +94,9 @@
     "pk": 10,
     "fields": {
       "ability": 5,
-      "name": "Animal Handling"
+      "created_at": "2020-01-20 00:00",
+      "name": "Animal Handling",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -84,7 +104,9 @@
     "pk": 11,
     "fields": {
       "ability": 5,
-      "name": "Insight"
+      "created_at": "2020-01-20 00:00",
+      "name": "Insight",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -92,7 +114,9 @@
     "pk": 12,
     "fields": {
       "ability": 5,
-      "name": "Medicine"
+      "created_at": "2020-01-20 00:00",
+      "name": "Medicine",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -100,7 +124,9 @@
     "pk": 13,
     "fields": {
       "ability": 5,
-      "name": "Perception"
+      "created_at": "2020-01-20 00:00",
+      "name": "Perception",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -108,7 +134,9 @@
     "pk": 14,
     "fields": {
       "ability": 5,
-      "name": "Survival"
+      "created_at": "2020-01-20 00:00",
+      "name": "Survival",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -116,7 +144,9 @@
     "pk": 15,
     "fields": {
       "ability": 6,
-      "name": "Deception"
+      "created_at": "2020-01-20 00:00",
+      "name": "Deception",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -124,7 +154,9 @@
     "pk": 16,
     "fields": {
       "ability": 6,
-      "name": "Intimidation"
+      "created_at": "2020-01-20 00:00",
+      "name": "Intimidation",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -132,7 +164,9 @@
     "pk": 17,
     "fields": {
       "ability": 6,
-      "name": "Performance"
+      "created_at": "2020-01-20 00:00",
+      "name": "Performance",
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -140,7 +174,9 @@
     "pk": 18,
     "fields": {
       "ability": 6,
-      "name": "Persuasion"
+      "created_at": "2020-01-20 00:00",
+      "name": "Persuasion",
+      "updated_at": "2020-01-20 00:00"
     }
   }
 ]

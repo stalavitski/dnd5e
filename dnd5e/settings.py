@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+import environ
+
+# Load environment variables from .env file in the dnd5e app
+env = environ.Env()
+environ.Env.read_env()  # reading .env file
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,12 +26,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2^szs#!(l51bunvqnk89zcczvs@2vbg(8#r@m#th_$p)h-*)rf'
+SECRET_KEY = env.str('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [env.str('ALLOWED_HOST')]
 
 
 # Application definition
@@ -83,12 +89,12 @@ WSGI_APPLICATION = 'dnd5e.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dnd5e',
-        'USER': 'saleor',
-        'PASSWORD': 'saleor',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': env.str('DATABASE_ENGINE'),
+        'NAME': env.str('DATABASE_NAME'),
+        'USER': env.str('DATABASE_USER'),
+        'PASSWORD': env.str('DATABASE_PASSWORD'),
+        'HOST': env.str('DATABASE_HOST'),
+        'PORT': env.str('DATABASE_PORT'),
     }
 }
 
@@ -137,5 +143,5 @@ AUTH_USER_MODEL = 'users.User'
 
 # The Debug Toolbar is shown only if your IP address is listed in the INTERNAL_IPS setting
 INTERNAL_IPS = [
-    '127.0.0.1'
+    env.str('INTERNAL_IP')
 ]

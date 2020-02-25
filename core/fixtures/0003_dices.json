@@ -3,49 +3,63 @@
     "model": "core.Dice",
     "pk": 1,
     "fields": {
-      "sides": 4
+      "created_at": "2020-01-20 00:00",
+      "sides": 4,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
     "model": "core.Dice",
     "pk": 2,
     "fields": {
-      "sides": 6
+      "created_at": "2020-01-20 00:00",
+      "sides": 6,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
     "model": "core.Dice",
     "pk": 3,
     "fields": {
-      "sides": 8
+      "created_at": "2020-01-20 00:00",
+      "sides": 8,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
     "model": "core.Dice",
     "pk": 4,
     "fields": {
-      "sides": 10
+      "created_at": "2020-01-20 00:00",
+      "sides": 10,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
     "model": "core.Dice",
     "pk": 5,
     "fields": {
-      "sides": 12
+      "created_at": "2020-01-20 00:00",
+      "sides": 12,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
     "model": "core.Dice",
     "pk": 6,
     "fields": {
-      "sides": 20
+      "created_at": "2020-01-20 00:00",
+      "sides": 20,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
     "model": "core.Dice",
     "pk": 7,
     "fields": {
-      "sides": 100
+      "created_at": "2020-01-20 00:00",
+      "sides": 100,
+      "updated_at": "2020-01-20 00:00"
     }
   }
 ]
