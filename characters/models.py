@@ -79,7 +79,7 @@ class CharacterSkill(ParanoidModel):
 
     @cached_property
     def modifier(self):
-        character_ability = CharacterAbility.objects.get(character=self.character, ability=self.skill.ability)
+        character_ability = CharacterAbility.objects.get(ability=self.skill.ability, character=self.character)
         # Calculate modifier depends on proficiency
         if self.proficiency == self.PROFICIENCY_NONE:
             return character_ability.modifier
