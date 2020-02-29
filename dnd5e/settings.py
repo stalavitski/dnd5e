@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django_paranoid',
     'rest_framework',
     # Local apps
+    'characters',
     'core',
     'users',
 ]

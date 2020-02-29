@@ -1,0 +1,572 @@
+[
+  {
+    "model": "characters.Background",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Acolyte",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Anthropologist",
+      "source": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Archaeologist",
+      "source": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Black Fist Double Agent",
+      "source": 8,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Caravan Specialist",
+      "source": 10,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Charlatan",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 7,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "City Watch",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 8,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Clan Crafter",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 9,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Cloistered Scholar",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 10,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Cormanthor Refugee",
+      "source": 11,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 11,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Courtier",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 12,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Criminal",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 13,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Dissenter",
+      "source": 12,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 14,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Dragon Casualty",
+      "source": 8,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 15,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Earthspur Miner",
+      "source": 10,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 16,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Entertainer",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 17,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Faction Agent",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 18,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Far Traveler",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 19,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Folk Hero",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 20,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Gate Urchin",
+      "source": 11,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 21,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Gladiator",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 22,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Guild Artisan",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 23,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Guild Merchant",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 24,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Harborfolk",
+      "source": 10,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 25,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Haunted One",
+      "source": 8,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 26,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Hermit",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 27,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Hillsfar Merchant",
+      "source": 11,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 28,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Hillsfar Smuggler",
+      "source": 11,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 29,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "House Agent",
+      "source": 13,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 30,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Inheritor",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 31,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Initiate",
+      "source": 12,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 32,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Inquisitor",
+      "source": 14,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 33,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Investigator",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 34,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Iron Route Bandit",
+      "source": 8,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 35,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Knight",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 36,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Knight of the Order",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 37,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Mercenary Veteran",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 38,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Mulmaster Aristocrat",
+      "source": 10,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 39,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Noble",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 40,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Outlander",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 41,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Phlan Insurgent",
+      "source": 8,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 42,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Phlan Refugee",
+      "source": 10,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 43,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Pirate",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 44,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Sage",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 45,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Sailor",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 46,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Secret Identity",
+      "source": 11,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 47,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Shade Fanatic",
+      "source": 11,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 48,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Soldier",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 49,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Spy",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 50,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Stojanow Prisoner",
+      "source": 8,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 51,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Ticklebelly Nomad",
+      "source": 8,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 52,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Trade Sheriff",
+      "source": 11,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 53,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Urban Bounty Hunter",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 54,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Urchin",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 55,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Uthgardt Tribe Member",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 56,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Vizier",
+      "source": 12,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.Background",
+    "pk": 57,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Waterdhavian Noble",
+      "source": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  }
+]

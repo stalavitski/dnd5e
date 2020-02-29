@@ -1,181 +1,161 @@
 [
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 1,
     "fields": {
-      "ability": "str",
       "created_at": "2020-01-20 00:00",
-      "name": "Athletics",
+      "name": "Player’s Handbook",
+      "short_name": "PHB",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 2,
     "fields": {
-      "ability": "dex",
       "created_at": "2020-01-20 00:00",
-      "name": "Acrobatics",
+      "name": "Tomb of Annihilation",
+      "short_name": "ToA",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 3,
     "fields": {
-      "ability": "dex",
       "created_at": "2020-01-20 00:00",
-      "name": "Sleight of Hand",
+      "name": "Baldur’s Gate: Descent Into Avernus",
+      "short_name": "BGDIA",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 4,
     "fields": {
-      "ability": "dex",
       "created_at": "2020-01-20 00:00",
-      "name": "Stealth",
+      "name": "Guildmasters’ Guide to Ravnica",
+      "short_name": "GGR",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 5,
     "fields": {
-      "ability": "int",
       "created_at": "2020-01-20 00:00",
-      "name": "Arcana",
+      "name": "Acquisitions Incorporated",
+      "short_name": "AI",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 6,
     "fields": {
-      "ability": "int",
       "created_at": "2020-01-20 00:00",
-      "name": "History",
+      "name": "Sword Coast Adventurer’s Guide",
+      "short_name": "SCAG",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 7,
     "fields": {
-      "ability": "int",
       "created_at": "2020-01-20 00:00",
-      "name": "Investigation",
+      "name": "Ghosts of Saltmarsh",
+      "short_name": "GoS",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 8,
     "fields": {
-      "ability": "int",
       "created_at": "2020-01-20 00:00",
-      "name": "Nature",
+      "name": "Curse of Strahd",
+      "short_name": "CoS",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 9,
     "fields": {
-      "ability": "int",
       "created_at": "2020-01-20 00:00",
-      "name": "Religion",
+      "name": "Eberron: Rising from the Last War",
+      "short_name": "ERLW",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 10,
     "fields": {
-      "ability": "wis",
       "created_at": "2020-01-20 00:00",
-      "name": "Animal Handling",
+      "name": "Elemental Evil",
+      "short_name": "EE",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 11,
     "fields": {
-      "ability": "wis",
       "created_at": "2020-01-20 00:00",
-      "name": "Insight",
+      "name": "Rage of Demons",
+      "short_name": "RoD",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 12,
     "fields": {
-      "ability": "wis",
       "created_at": "2020-01-20 00:00",
-      "name": "Medicine",
+      "name": "Plane Shift: Amonkhet",
+      "short_name": "PS:A",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 13,
     "fields": {
-      "ability": "wis",
       "created_at": "2020-01-20 00:00",
-      "name": "Perception",
+      "name": "Wayfinder's Guide to Eberron",
+      "short_name": "WGE",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 14,
     "fields": {
-      "ability": "wis",
       "created_at": "2020-01-20 00:00",
-      "name": "Survival",
+      "name": "Plane Shift: Innistrad",
+      "short_name": "PS:In",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 15,
     "fields": {
-      "ability": "cha",
       "created_at": "2020-01-20 00:00",
-      "name": "Deception",
+      "name": "Dungeon Master’s Guide",
+      "short_name": "DMG",
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "core.Source",
     "pk": 16,
     "fields": {
-      "ability": "cha",
       "created_at": "2020-01-20 00:00",
-      "name": "Intimidation",
-      "updated_at": "2020-01-20 00:00"
-    }
-  },
-  {
-    "model": "core.Skill",
-    "pk": 17,
-    "fields": {
-      "ability": "cha",
-      "created_at": "2020-01-20 00:00",
-      "name": "Performance",
-      "updated_at": "2020-01-20 00:00"
-    }
-  },
-  {
-    "model": "core.Skill",
-    "pk": 18,
-    "fields": {
-      "ability": "cha",
-      "created_at": "2020-01-20 00:00",
-      "name": "Persuasion",
+      "name": "Xanathar’s Guide to Everything",
+      "short_name": "XGE",
       "updated_at": "2020-01-20 00:00"
     }
   }

@@ -1,181 +1,199 @@
 [
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 1,
     "fields": {
-      "ability": "str",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Athletics",
+      "proficiency": "none",
+      "skill": 1,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 2,
     "fields": {
-      "ability": "dex",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Acrobatics",
+      "proficiency": "none",
+      "skill": 2,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 3,
     "fields": {
-      "ability": "dex",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Sleight of Hand",
+      "proficiency": "none",
+      "skill": 3,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 4,
     "fields": {
-      "ability": "dex",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Stealth",
+      "proficiency": "none",
+      "skill": 4,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 5,
     "fields": {
-      "ability": "int",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Arcana",
+      "proficiency": "none",
+      "skill": 5,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 6,
     "fields": {
-      "ability": "int",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "History",
+      "proficiency": "none",
+      "skill": 6,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 7,
     "fields": {
-      "ability": "int",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Investigation",
+      "proficiency": "none",
+      "skill": 7,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 8,
     "fields": {
-      "ability": "int",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Nature",
+      "proficiency": "none",
+      "skill": 8,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 9,
     "fields": {
-      "ability": "int",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Religion",
+      "proficiency": "proficiency",
+      "skill": 9,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 10,
     "fields": {
-      "ability": "wis",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Animal Handling",
+      "proficiency": "none",
+      "skill": 10,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 11,
     "fields": {
-      "ability": "wis",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Insight",
+      "proficiency": "proficiency",
+      "skill": 11,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 12,
     "fields": {
-      "ability": "wis",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Medicine",
+      "proficiency": "proficiency",
+      "skill": 12,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 13,
     "fields": {
-      "ability": "wis",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Perception",
+      "proficiency": "none",
+      "skill": 13,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 14,
     "fields": {
-      "ability": "wis",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Survival",
+      "proficiency": "none",
+      "skill": 14,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 15,
     "fields": {
-      "ability": "cha",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Deception",
+      "proficiency": "none",
+      "skill": 15,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 16,
     "fields": {
-      "ability": "cha",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Intimidation",
+      "proficiency": "none",
+      "skill": 16,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 17,
     "fields": {
-      "ability": "cha",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Performance",
+      "proficiency": "none",
+      "skill": 17,
       "updated_at": "2020-01-20 00:00"
     }
   },
   {
-    "model": "core.Skill",
+    "model": "characters.CharacterSkill",
     "pk": 18,
     "fields": {
-      "ability": "cha",
+      "character": 1,
       "created_at": "2020-01-20 00:00",
-      "name": "Persuasion",
+      "proficiency": "proficiency",
+      "skill": 18,
       "updated_at": "2020-01-20 00:00"
     }
   }

@@ -1,12 +1,6 @@
 from rest_framework import serializers
 
-from core.models import Ability, Dice, Feature, Skill
-
-
-class AbilitySerializer(serializers.ModelSerializer):
-    class Meta:
-        exclude = ()
-        model = Ability
+from core.models import Dice, Feature, Skill
 
 
 class DiceSerializer(serializers.ModelSerializer):

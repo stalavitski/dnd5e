@@ -1,13 +1,7 @@
 from rest_framework import viewsets
 
-from core.models import Ability, Dice, Feature, Skill
-from core.serializers import AbilitySerializer, DiceSerializer, FeatureSerializer, SkillSerializer
-
-
-class AbilityViewSet(viewsets.ModelViewSet):
-    http_method_names = ['get', 'head', 'patch', 'put']
-    queryset = Ability.objects.all()
-    serializer_class = AbilitySerializer
+from core.models import Dice, Feature, Skill
+from core.serializers import DiceSerializer, FeatureSerializer, SkillSerializer
 
 
 class DiceViewSet(viewsets.ModelViewSet):
