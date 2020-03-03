@@ -8,13 +8,13 @@ from characters.views import (
 )
 
 router = routers.DefaultRouter()
-router.register(r'character-ability/(?P<character_id>[0-9]+)', CharacterAbilityViewSet, 'character-ability')
+router.register(r'(?P<character_id>[0-9]+)/ability', CharacterAbilityViewSet, 'character-ability')
 router.register(
-    r'character-saving-throw/(?P<character_id>[0-9]+)',
+    r'(?P<character_id>[0-9]+)/saving-throw',
     CharacterSavingThrowViewSet,
     'character-saving-throw'
 )
-router.register(r'character-skill/(?P<character_id>[0-9]+)', CharacterSkillViewSet, 'character-skill')
-router.register(r'character', CharacterViewSet)
+router.register(r'(?P<character_id>[0-9]+)/skill', CharacterSkillViewSet, 'character-skill')
+router.register(r'', CharacterViewSet)
 
 urlpatterns = router.urls
