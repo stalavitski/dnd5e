@@ -196,5 +196,204 @@
       "skill": 18,
       "updated_at": "2020-01-20 00:00"
     }
+  },
+
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 19,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 20,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 21,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 3,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 22,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "proficiency",
+      "skill": 4,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 23,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 5,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 24,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 25,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "proficiency",
+      "skill": 7,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 26,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 8,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 27,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 9,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 28,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 10,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 29,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "proficiency",
+      "skill": 11,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 30,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 12,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 31,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "proficiency",
+      "skill": 13,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 32,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "proficiency",
+      "skill": 14,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 33,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 15,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 34,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 16,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 35,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 17,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "characters.CharacterSkill",
+    "pk": 36,
+    "fields": {
+      "character": 2,
+      "created_at": "2020-01-20 00:00",
+      "proficiency": "none",
+      "skill": 18,
+      "updated_at": "2020-01-20 00:00"
+    }
   }
 ]

@@ -1,38 +1,44 @@
-from rest_framework import status, viewsets
+from rest_framework import mixins, status, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from characters.models import Character
-from characters.serializers import CharacterSerializer
+from characters.models import Character, CharacterAbility, CharacterSavingThrow, CharacterSkill
+from characters.serializers import (
+    CharacterAbilitySerializer,
+    CharacterSerializer,
+    CharacterSavingThrowSerializer,
+    CharacterSkillSerializer
+)
 from core.utils import get_ability_name
+
+
+class CharacterAbilityViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
+    http_method_names = ['get', 'head', 'patch']
+    serializer_class = CharacterAbilitySerializer
+
+    def get_queryset(self):
+        character_id = self.kwargs.get('character_id')
+        return CharacterAbility.objects.filter(character_id=character_id)
+
+
+class CharacterSavingThrowViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
+    http_method_names = ['get', 'head', 'patch']
+    serializer_class = CharacterSavingThrowSerializer
+
+    def get_queryset(self):
+        character_id = self.kwargs.get('character_id')
+        return CharacterSavingThrow.objects.select_related('character').filter(character_id=character_id)
+
+
+class CharacterSkillViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
+    http_method_names = ['get', 'head', 'patch']
+    serializer_class = CharacterSkillSerializer
+
+    def get_queryset(self):
+        character_id = self.kwargs.get('character_id')
+        return CharacterSkill.objects.select_related('character', 'skill').filter(character_id=character_id)
 
 
 class CharacterViewSet(viewsets.ModelViewSet):
     queryset = Character.objects.all()
     serializer_class = CharacterSerializer
-
-    @action(detail=True, methods=['get'])
-    def abilities(self, request, pk=None):
-        character = self.get_object()
-        data = []
-        for character_ability in character.character_abilities.all():
-            ability_name = get_ability_name(character_ability.ability)
-            data.append({
-                'ability': ability_name,
-                'modifier': character_ability.modifier,
-                'value': character_ability.value
-            })
-        return Response(data, status.HTTP_200_OK)
-
-    @action(detail=True, methods=['get'])
-    def skills(self, request, pk=None):
-        character = self.get_object()
-        data = []
-        for character_skill in character.character_skills.select_related('skill').all():
-            data.append({
-                'modifier': character_skill.modifier,
-                'proficiency': character_skill.proficiency,
-                'skill': character_skill.skill.name
-            })
-        return Response(data, status.HTTP_200_OK)
-

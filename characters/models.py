@@ -6,6 +6,8 @@ from django.utils.functional import cached_property
 from django_paranoid.models import ParanoidModel
 
 from core.data import ABILITY_CHOICES, ABILITY_DEXTERITY
+from core.utils import get_ability_name
+
 
 class Background(ParanoidModel):
     name = models.CharField(max_length=30, unique=True)
@@ -17,12 +19,21 @@ class Background(ParanoidModel):
 
 class Character(ParanoidModel):
     background = models.ForeignKey('characters.Background', models.CASCADE, 'characters')
-    experience = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(355000)])
+    experience = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(355000)])
     name = models.CharField(max_length=50)
     skills = models.ManyToManyField('core.Skill', 'characters', through='characters.CharacterSkill')
 
     def __str__(self):
         return self.name
+
+    @cached_property
+    def armor_class(self):
+        # @TODO temp
+        return 10
+
+    @cached_property
+    def initiative(self):
+        return self.character_abilities.get(ability=ABILITY_DEXTERITY).modifier
 
     @cached_property
     def level(self):
@@ -35,8 +46,9 @@ class Character(ParanoidModel):
         )
 
     @cached_property
-    def initiative(self):
-        return self.character_abilities.get(ability=ABILITY_DEXTERITY).modifier
+    def speed(self):
+        # @TODO temp
+        return 30
 
 
 class CharacterAbility(ParanoidModel):
@@ -54,10 +66,41 @@ class CharacterAbility(ParanoidModel):
     class Meta:
         unique_together = [['ability', 'character']]
 
+    def __str__(self):
+        return '{} ability'.format(self.ability_name)
+
+    @property
+    def ability_name(self):
+        return get_ability_name(self.ability)
+
     @property
     def modifier(self):
         return math.floor((self.value - self.AVERAGE_VALUE) / 2)
 
+
+class CharacterSavingThrow(ParanoidModel):
+    ability = models.CharField(choices=ABILITY_CHOICES, max_length=3)
+    character = models.ForeignKey('characters.Character', models.CASCADE, 'character_saving_throws')
+    is_proficient = models.BooleanField(default=False)
+
+    class Meta:
+        unique_together = (('ability', 'character'),)
+
+    def __str__(self):
+        return '{} saving throw'.format(self.ability_name)
+
+    @property
+    def ability_name(self):
+        return get_ability_name(self.ability)
+
+    @property
+    def modifier(self):
+        character_ability = self.character.character_abilities.get(ability=self.ability)
+        modifier = character_ability.modifier
+        # Add proficiency bonus if proficient
+        if self.is_proficient:
+            modifier += self.character.level.proficiency_bonus
+        return modifier
 
 class CharacterSkill(ParanoidModel):
     PROFICIENCY_NONE = 'none'
@@ -79,7 +122,7 @@ class CharacterSkill(ParanoidModel):
 
     @cached_property
     def modifier(self):
-        character_ability = CharacterAbility.objects.get(ability=self.skill.ability, character=self.character)
+        character_ability = self.character.character_abilities.get(ability=self.skill.ability)
         # Calculate modifier depends on proficiency
         if self.proficiency == self.PROFICIENCY_NONE:
             return character_ability.modifier

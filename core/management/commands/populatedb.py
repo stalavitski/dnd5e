@@ -20,5 +20,6 @@ class Command(BaseCommand):
             '0002_backgrounds.json',
             '0003_characters.json',
             '0004_character_abilities.json',
-            '0005_character_skills.json'
+            '0005_character_skills.json',
+            '0006_character_saving_throws.json'
         ))

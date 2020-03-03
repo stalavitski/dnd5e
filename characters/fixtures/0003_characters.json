@@ -9,5 +9,16 @@
       "name": "Taklinn Fireforge",
       "updated_at": "2020-01-20 00:00"
     }
+  },
+  {
+    "model": "characters.Character",
+    "pk": 2,
+    "fields": {
+      "background": 53,
+      "created_at": "2020-01-20 00:00",
+      "experience": 0,
+      "name": "Johann Braun",
+      "updated_at": "2020-01-20 00:00"
+    }
   }
 ]

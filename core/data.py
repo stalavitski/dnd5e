@@ -14,4 +14,4 @@ ABILITY_DICT = {
     ABILITY_CHARISMA: 'Charisma'
 }
 
-ABILITY_CHOICES = ((key, value) for key, value in ABILITY_DICT.items())
+ABILITY_CHOICES = tuple((key, value) for key, value in ABILITY_DICT.items())
