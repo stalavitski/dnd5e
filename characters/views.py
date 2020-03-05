@@ -34,12 +34,7 @@ class CharacterDetailsViewSet(mixins.UpdateModelMixin, mixins.RetrieveModelMixin
         serializer_class=CharacterDetailsPortraitSerializer
     )
     def portrait(self, request, character_id):
-        obj = self.get_object()
-        serializer = self.serializer_class(obj, data=request.data, partial=True)
-        if serializer.is_valid():
-            serializer.save()
-            return response.Response(serializer.data)
-        return response.Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
+        return self.update(request, character_id)
 
 
 class CharacterSavingThrowViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
