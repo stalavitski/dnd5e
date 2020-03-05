@@ -4,9 +4,11 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django.utils.functional import cached_property
 from django_paranoid.models import ParanoidModel
+from django_resized import ResizedImageField
 
+from characters.data import ALIGNMENT_CHOICES, GENDER_CHOICES, PROFICIENCY_CHOICES, PROFICIENCY_EXP, PROFICIENCY_NONE
 from core.data import ABILITY_CHOICES, ABILITY_DEXTERITY
-from core.utils import get_ability_name
+from core.utils import get_ability_name, portrait_upload_to
 
 
 class Background(ParanoidModel):
@@ -18,9 +20,9 @@ class Background(ParanoidModel):
 
 
 class Character(ParanoidModel):
-    background = models.ForeignKey('characters.Background', models.CASCADE, 'characters')
+    background = models.ForeignKey('characters.Background', models.CASCADE, 'characters', blank=True, null=True)
     experience = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(355000)])
-    name = models.CharField(max_length=50)
+    name = models.CharField(blank=True, max_length=50)
     skills = models.ManyToManyField('core.Skill', 'characters', through='characters.CharacterSkill')
 
     def __str__(self):
@@ -78,6 +80,24 @@ class CharacterAbility(ParanoidModel):
         return math.floor((self.value - self.AVERAGE_VALUE) / 2)
 
 
+class CharacterDetails(ParanoidModel):
+    age = models.IntegerField(blank=True, null=True)
+    alignment = models.CharField(blank=True, choices=ALIGNMENT_CHOICES, max_length=2)
+    appearance = models.TextField(blank=True)
+    portrait = ResizedImageField(crop=('top', 'right'), size=(300, 300), upload_to=portrait_upload_to)
+    character = models.OneToOneField('characters.Character', models.CASCADE, related_name='details')
+    eyes = models.CharField(blank=True, max_length=60)
+    gender = models.CharField(blank=True, choices=GENDER_CHOICES, max_length=1)
+    hair = models.CharField(blank=True, max_length=60)
+    height = models.IntegerField(blank=True, help_text='In inches', null=True)
+    history = models.TextField(blank=True)
+    notes = models.TextField(blank=True)
+    organizations = models.TextField(blank=True, help_text='Allies and Organizations')
+    player = models.ForeignKey('users.User', models.CASCADE)
+    skin = models.CharField(blank=True, max_length=60)
+    weight = models.IntegerField(blank=True, help_text='In pounds', null=True)
+
+
 class CharacterSavingThrow(ParanoidModel):
     ability = models.CharField(choices=ABILITY_CHOICES, max_length=3)
     character = models.ForeignKey('characters.Character', models.CASCADE, 'character_saving_throws')
@@ -103,16 +123,6 @@ class CharacterSavingThrow(ParanoidModel):
         return modifier
 
 class CharacterSkill(ParanoidModel):
-    PROFICIENCY_NONE = 'none'
-    PROFICIENCY_PROF = 'proficiency'
-    PROFICIENCY_EXP = 'expertise'
-
-    PROFICIENCY_CHOICES = (
-        (PROFICIENCY_NONE, 'None'),
-        (PROFICIENCY_PROF, 'Proficiency'),
-        (PROFICIENCY_EXP, 'Expertise')
-    )
-
     character = models.ForeignKey('characters.Character', models.CASCADE, 'character_skills')
     proficiency = models.CharField(choices=PROFICIENCY_CHOICES, default=PROFICIENCY_NONE, max_length=11)
     skill = models.ForeignKey('core.Skill', models.CASCADE, 'character_skills')
@@ -124,12 +134,12 @@ class CharacterSkill(ParanoidModel):
     def modifier(self):
         character_ability = self.character.character_abilities.get(ability=self.skill.ability)
         # Calculate modifier depends on proficiency
-        if self.proficiency == self.PROFICIENCY_NONE:
+        if self.proficiency == PROFICIENCY_NONE:
             return character_ability.modifier
         else:
             proficiency_modifier = self.character.level.proficiency_bonus
             # Proficiency modifier is doubled for skill with expertise
-            if self.proficiency is self.PROFICIENCY_EXP:
+            if self.proficiency is PROFICIENCY_EXP:
                 proficiency_modifier *= 2
             return character_ability.modifier + proficiency_modifier
 

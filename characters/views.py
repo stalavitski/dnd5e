@@ -1,15 +1,15 @@
-from rest_framework import mixins, status, viewsets
-from rest_framework.decorators import action
-from rest_framework.response import Response
+from djangorestframework_camel_case import parser
+from rest_framework import decorators, mixins, response, status, viewsets
 
-from characters.models import Character, CharacterAbility, CharacterSavingThrow, CharacterSkill
+from characters.models import Character, CharacterAbility, CharacterDetails, CharacterSavingThrow, CharacterSkill
 from characters.serializers import (
     CharacterAbilitySerializer,
-    CharacterSerializer,
+    CharacterDetailsPortraitSerializer,
+    CharacterDetailsSerializer,
     CharacterSavingThrowSerializer,
+    CharacterSerializer,
     CharacterSkillSerializer
 )
-from core.utils import get_ability_name
 
 
 class CharacterAbilityViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
@@ -19,6 +19,27 @@ class CharacterAbilityViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, vi
     def get_queryset(self):
         character_id = self.kwargs.get('character_id')
         return CharacterAbility.objects.filter(character_id=character_id)
+
+
+class CharacterDetailsViewSet(mixins.UpdateModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+    http_method_names = ['get', 'head', 'patch']
+    lookup_field = 'character_id'
+    serializer_class = CharacterDetailsSerializer
+    queryset = CharacterDetails.objects.select_related('player').all()
+
+    @decorators.action(
+        detail=True,
+        methods=['patch'],
+        parser_classes=[parser.CamelCaseMultiPartParser],
+        serializer_class=CharacterDetailsPortraitSerializer
+    )
+    def portrait(self, request, character_id):
+        obj = self.get_object()
+        serializer = self.serializer_class(obj, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return response.Response(serializer.data)
+        return response.Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
 
 
 class CharacterSavingThrowViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):

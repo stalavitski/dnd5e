@@ -146,3 +146,18 @@ AUTH_USER_MODEL = 'users.User'
 INTERNAL_IPS = [
     env.str('INTERNAL_IP')
 ]
+
+# Uploads
+MEDIA_URL =  '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# DRF configs: add parsers and renderers for JSON camelCase
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': (
+        'djangorestframework_camel_case.parser.CamelCaseJSONParser',
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
+        'djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer'
+    )
+}

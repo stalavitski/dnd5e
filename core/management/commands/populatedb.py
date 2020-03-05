@@ -14,6 +14,7 @@ class Command(BaseCommand):
             loaddata_command.run_from_argv(('./manage.py', 'loaddata', file_path))
 
     def handle(self, *args, **options):
+        self._load_data('users', ('0001_users.json',))
         self._load_data('core', ('0001_sources.json', '0002_skills.json', '0003_dices.json'))
         self._load_data('characters', (
             '0001_levels.json',

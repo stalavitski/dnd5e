@@ -1,7 +1,7 @@
 from django.db import models
 from django.dispatch import receiver
 
-from characters.models import Character
+from characters.models import Character, CharacterDetails
 from core.data import ABILITY_DICT
 from core.models import Skill
 
@@ -17,4 +17,5 @@ def execute_after_save(sender, instance, created, *args, **kwargs):
         skill_ids = Skill.objects.values_list('id', flat=True)
         for skill_id in skill_ids:
             instance.character_skills.create(skill_id=skill_id)
-
+        # Create a character details relation
+        CharacterDetails.objects.create(character=instance, player_id=1)

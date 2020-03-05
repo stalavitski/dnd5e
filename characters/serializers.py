@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from characters.models import Character, CharacterAbility, CharacterSavingThrow, CharacterSkill
+from characters.models import Character, CharacterAbility, CharacterDetails, CharacterSavingThrow, CharacterSkill
 
 
 class CharacterAbilitySerializer(serializers.ModelSerializer):
@@ -10,6 +10,22 @@ class CharacterAbilitySerializer(serializers.ModelSerializer):
     class Meta:
         exclude = ('character', 'created_at', 'deleted_at', 'updated_at')
         model = CharacterAbility
+
+
+class CharacterDetailsSerializer(serializers.ModelSerializer):
+    player = serializers.CharField(read_only=True, source='player.first_name')
+    portrait = serializers.ImageField(read_only=True)
+
+    class Meta:
+        exclude = ('character', 'created_at', 'deleted_at', 'updated_at')
+        model = CharacterDetails
+
+
+class CharacterDetailsPortraitSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = ('portrait',)
+        model = CharacterDetails
+
 
 class CharacterSavingThrowSerializer(serializers.ModelSerializer):
     ability = serializers.CharField(read_only=True, source='ability_name')
