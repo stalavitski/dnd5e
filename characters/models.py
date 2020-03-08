@@ -69,7 +69,7 @@ class CharacterAbility(ParanoidModel):
         unique_together = [['ability', 'character']]
 
     def __str__(self):
-        return '{} ability'.format(self.ability_name)
+        return '{} Ability'.format(self.ability_name)
 
     @property
     def ability_name(self):
@@ -107,7 +107,7 @@ class CharacterSavingThrow(ParanoidModel):
         unique_together = (('ability', 'character'),)
 
     def __str__(self):
-        return '{} saving throw'.format(self.ability_name)
+        return '{} Saving Throw'.format(self.ability_name)
 
     @property
     def ability_name(self):
@@ -129,6 +129,9 @@ class CharacterSkill(ParanoidModel):
 
     class Meta:
         unique_together = [['character', 'skill']]
+
+    def __str__(self):
+        return '{} Skill'.format(self.skill.name)
 
     @cached_property
     def modifier(self):
