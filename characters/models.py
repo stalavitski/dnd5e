@@ -1,13 +1,14 @@
 import math
 
 from django.core.validators import MaxValueValidator, MinValueValidator
-from django.db import models
+from django.db import models, transaction
 from django.utils.functional import cached_property
 from django_paranoid.models import ParanoidModel
 from django_resized import ResizedImageField
 
 from characters.data import ALIGNMENT_CHOICES, GENDER_CHOICES, PROFICIENCY_CHOICES, PROFICIENCY_EXP, PROFICIENCY_NONE
-from core.data import ABILITY_CHOICES, ABILITY_DEXTERITY
+from core.data import ABILITY_CHOICES, ABILITY_DEXTERITY, ABILITY_DICT
+from core.models import Skill
 from core.utils import get_ability_name, portrait_upload_to
 
 
@@ -29,7 +30,7 @@ class Character(ParanoidModel):
         return self.name
 
     @cached_property
-    def armor_class(self):
+    def armor_class(self): # pragma: no cover
         # @TODO temp
         return 10
 
@@ -47,8 +48,25 @@ class Character(ParanoidModel):
                 .last()
         )
 
+    @transaction.atomic
+    def save(self, force_insert=False, force_update=False, using=None, update_fields=None):
+        adding = self._state.adding
+        super().save(force_insert, force_update, using, update_fields)
+        # Create default relations when record is created
+        if adding:
+            # Create default abilities and saving throws
+            for ability in ABILITY_DICT.keys():
+                self.character_abilities.create(ability=ability)
+                self.character_saving_throws.create(ability=ability)
+            # Create default skills
+            skill_ids = Skill.objects.values_list('id', flat=True)
+            for skill_id in skill_ids:
+                self.character_skills.create(skill_id=skill_id)
+            # Create a character details relation
+            CharacterDetails.objects.create(character=self, player_id=1)
+
     @cached_property
-    def speed(self):
+    def speed(self): # pragma: no cover
         # @TODO temp
         return 30
 

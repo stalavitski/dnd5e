@@ -1,7 +1,7 @@
 from rest_framework import routers
 
 
-class CharacterDetailsRouter(routers.DefaultRouter):
+class CharacterDetailsRouter(routers.SimpleRouter):
     routes = [
         # List route.
         routers.Route(
@@ -42,5 +42,5 @@ class CharacterDetailsRouter(routers.DefaultRouter):
             name='{basename}-{url_name}',
             detail=True,
             initkwargs={}
-        ),
+        )
     ]

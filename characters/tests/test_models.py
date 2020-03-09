@@ -1,8 +1,17 @@
 from django.test import TestCase
 
+from characters.data import PROFICIENCY_EXP, PROFICIENCY_PROF
+from characters.models import (
+    Background,
+    Character,
+    CharacterAbility,
+    CharacterSavingThrow,
+    CharacterSkill,
+    Class,
+    Level
+)
 from core.data import ABILITY_DEXTERITY, ABILITY_DICT
-from characters.models import Background, Character, CharacterAbility, CharacterSavingThrow, CharacterSkill, Class, Level
-from characters.data import PROFICIENCY_PROF, PROFICIENCY_EXP
+from core.models import Skill
 
 
 class BackgroundTestCase(TestCase):
@@ -20,9 +29,11 @@ class CharacterTestCase(TestCase):
     fixtures = (
         '0001_users',
         '0001_sources.json',
+        '0002_skills.json',
         '0001_levels.json',
         '0002_backgrounds.json',
-        '0003_characters.json'
+        '0003_characters.json',
+        '0004_character_abilities.json'
     )
 
     def test__str__returns_correct_value(self):
@@ -64,6 +75,19 @@ class CharacterTestCase(TestCase):
             # Invalidate cache of cached_property
             del character.level
 
+    def test__save__creates_default_relations__when_record_is_added(self):
+        background = Background.objects.first()
+        character = Character(background=background, name='Test')
+        self.assertTrue(character._state.adding)
+        character.save()
+        # Abilities are created
+        self.assertEqual(character.character_abilities.count(), len(ABILITY_DICT))
+        # Skills are created
+        skills_count = Skill.objects.count()
+        self.assertEqual(character.character_skills.count(), skills_count)
+        # Details is created
+        self.assertIsNotNone(character.details)
+
 
 class CharacterAbilityTestCase(TestCase):
     fixtures = (
@@ -71,7 +95,8 @@ class CharacterAbilityTestCase(TestCase):
         '0001_sources.json',
         '0001_levels.json',
         '0002_backgrounds.json',
-        '0003_characters.json'
+        '0003_characters.json',
+        '0004_character_abilities.json'
     )
 
     def test__str__returns_correct_value(self):
@@ -105,7 +130,9 @@ class CharacterSavingThrowTestCase(TestCase):
         '0001_sources.json',
         '0001_levels.json',
         '0002_backgrounds.json',
-        '0003_characters.json'
+        '0003_characters.json',
+        '0004_character_abilities.json',
+        '0006_character_saving_throws.json'
     )
 
     def test__str__returns_correct_value(self):
@@ -146,7 +173,9 @@ class CharacterSkillTestCase(TestCase):
         '0002_skills.json',
         '0001_levels.json',
         '0002_backgrounds.json',
-        '0003_characters.json'
+        '0003_characters.json',
+        '0004_character_abilities.json',
+        '0005_character_skills.json'
     )
 
     def test__str__returns_correct_value(self):
@@ -205,7 +234,3 @@ class LevelTestCase(TestCase):
     def test__str__returns_correct_value(self):
         level = Level.objects.first()
         self.assertEqual(int(str(level)), level.value)
-
-
-
-
