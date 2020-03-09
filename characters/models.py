@@ -7,9 +7,10 @@ from django_paranoid.models import ParanoidModel
 from django_resized import ResizedImageField
 
 from characters.data import ALIGNMENT_CHOICES, GENDER_CHOICES, PROFICIENCY_CHOICES, PROFICIENCY_EXP, PROFICIENCY_NONE
+from characters.utils import portrait_upload_to
 from core.data import ABILITY_CHOICES, ABILITY_DEXTERITY, ABILITY_DICT
 from core.models import Skill
-from core.utils import get_ability_name, portrait_upload_to
+from core.utils import get_ability_name
 
 
 class Background(ParanoidModel):
