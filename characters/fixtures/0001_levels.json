@@ -1,0 +1,222 @@
+[
+  {
+    "model": "characters.Level",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 2,
+      "required_experience": 0,
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 2,
+      "required_experience": 300,
+      "updated_at": "2020-01-20 00:00",
+      "value": 2
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 2,
+      "required_experience": 900,
+      "updated_at": "2020-01-20 00:00",
+      "value": 3
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 2,
+      "required_experience": 2700,
+      "updated_at": "2020-01-20 00:00",
+      "value": 4
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 3,
+      "required_experience": 6500,
+      "updated_at": "2020-01-20 00:00",
+      "value": 5
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 3,
+      "required_experience": 14000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 6
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 7,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 3,
+      "required_experience": 23000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 7
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 8,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 3,
+      "required_experience": 34000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 8
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 9,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 4,
+      "required_experience": 48000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 9
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 10,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 4,
+      "required_experience": 64000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 10
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 11,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 4,
+      "required_experience": 85000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 11
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 12,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 4,
+      "required_experience": 100000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 12
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 13,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 5,
+      "required_experience": 120000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 13
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 14,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 5,
+      "required_experience": 140000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 14
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 15,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 5,
+      "required_experience": 165000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 15
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 16,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 5,
+      "required_experience": 195000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 16
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 17,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 6,
+      "required_experience": 225000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 17
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 18,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 6,
+      "required_experience": 265000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 18
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 19,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 6,
+      "required_experience": 305000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 19
+    }
+  },
+  {
+    "model": "characters.Level",
+    "pk": 20,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "proficiency_bonus": 6,
+      "required_experience": 355000,
+      "updated_at": "2020-01-20 00:00",
+      "value": 20
+    }
+  }
+]

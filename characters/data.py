@@ -1,0 +1,43 @@
+ALIGNMENT_LAWFUL_GOOD = 'lg'
+ALIGNMENT_NEUTRAL_GOOD = 'ng'
+ALIGNMENT_CHAOTIC_GOOD = 'cg'
+ALIGNMENT_LAWFUL_NEUTRAL = 'ln'
+ALIGNMENT_TRUE_NEUTRAL = 'n'
+ALIGNMENT_CHAOTIC_NEUTRAL = 'cn'
+ALIGNMENT_LAWFUL_EVIL = 'le'
+ALIGNMENT_NEUTRAL_EVIL = 'ne'
+ALIGNMENT_CHAOTIC_EVIL = 'ce'
+
+ALIGNMENT_DICT = {
+    ALIGNMENT_LAWFUL_GOOD: 'Lawful Good',
+    ALIGNMENT_NEUTRAL_GOOD: 'Neutral Good',
+    ALIGNMENT_CHAOTIC_GOOD: 'Chaotic Good',
+    ALIGNMENT_LAWFUL_NEUTRAL: 'Lawful Neutral',
+    ALIGNMENT_TRUE_NEUTRAL: 'True Neutral',
+    ALIGNMENT_CHAOTIC_NEUTRAL: 'Chaotic Neutral',
+    ALIGNMENT_LAWFUL_EVIL: 'Lawful Evil',
+    ALIGNMENT_NEUTRAL_EVIL: 'True Evil',
+    ALIGNMENT_CHAOTIC_EVIL: 'Chaotic Evil'
+}
+
+ALIGNMENT_CHOICES = tuple((key, value) for key, value in ALIGNMENT_DICT.items())
+
+GENDER_MALE = 'm'
+GENDER_FEMALE = 'f'
+
+GENDER_DICT = {
+    GENDER_MALE: 'Male',
+    GENDER_FEMALE: 'Female'
+}
+
+GENDER_CHOICES = tuple((key, value) for key, value in GENDER_DICT.items())
+
+PROFICIENCY_NONE = 'none'
+PROFICIENCY_PROF = 'proficiency'
+PROFICIENCY_EXP = 'expertise'
+
+PROFICIENCY_CHOICES = (
+    (PROFICIENCY_NONE, 'None'),
+    (PROFICIENCY_PROF, 'Proficiency'),
+    (PROFICIENCY_EXP, 'Expertise')
+)
