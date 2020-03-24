@@ -6,8 +6,8 @@
       "ability": "str",
       "character": 1,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 14
+      "initial_value": 14,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -17,8 +17,8 @@
       "ability": "dex",
       "character": 1,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 8
+      "initial_value": 8,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -28,8 +28,8 @@
       "ability": "con",
       "character": 1,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 13
+      "initial_value": 13,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -39,8 +39,8 @@
       "ability": "int",
       "character": 1,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 10
+      "initial_value": 10,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -50,8 +50,8 @@
       "ability": "wis",
       "character": 1,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 15
+      "initial_value": 15,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -61,8 +61,8 @@
       "ability": "cha",
       "character": 1,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 12
+      "initial_value": 12,
+      "updated_at": "2020-01-20 00:00"
     }
   },
 
@@ -73,8 +73,8 @@
       "ability": "str",
       "character": 2,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 8
+      "initial_value": 8,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -84,8 +84,8 @@
       "ability": "dex",
       "character": 2,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 15
+      "initial_value": 15,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -95,8 +95,8 @@
       "ability": "con",
       "character": 2,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 14
+      "initial_value": 14,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -106,8 +106,8 @@
       "ability": "int",
       "character": 2,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 12
+      "initial_value": 12,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -117,8 +117,8 @@
       "ability": "wis",
       "character": 2,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 13
+      "initial_value": 13,
+      "updated_at": "2020-01-20 00:00"
     }
   },
   {
@@ -128,8 +128,8 @@
       "ability": "cha",
       "character": 2,
       "created_at": "2020-01-20 00:00",
-      "updated_at": "2020-01-20 00:00",
-      "value": 10
+      "initial_value": 10,
+      "updated_at": "2020-01-20 00:00"
     }
   }
 ]

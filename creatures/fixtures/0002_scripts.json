@@ -1,0 +1,56 @@
+[
+  {
+    "model": "creatures.Script",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Infernal",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Script",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Elvish",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Script",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Draconic",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Script",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Celestial",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Script",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Common",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Script",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Dwarvish",
+      "updated_at": "2020-01-20 00:00"
+    }
+  }
+]

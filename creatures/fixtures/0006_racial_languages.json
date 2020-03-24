@@ -1,0 +1,62 @@
+[
+  {
+    "model": "creatures.RacialLanguage",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "language_id": 5,
+      "race_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialLanguage",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "language_id": 3,
+      "race_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialLanguage",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "language_id": 23,
+      "race_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialLanguage",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "language_id": 5,
+      "race_id": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialLanguage",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "language_id": 9,
+      "race_id": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialLanguage",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "language_id": 5,
+      "race_id": 3,
+      "updated_at": "2020-01-20 00:00"
+    }
+  }
+]

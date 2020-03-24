@@ -1,0 +1,70 @@
+[
+  {
+    "model": "creatures.Race",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "age": "Aarakocra reach maturity by age 3. Compared to humans, aarakocra don’t usually live longer than 30 years.",
+      "alignment": "Most aarakocra are good and rarely choose sides when it comes to law and chaos. Tribal leaders and warriors might be lawful, while explorers and adventurers might tend toward chaotic.",
+      "flight_speed": 50,
+      "flight_speed_description": "You have a flying speed of 50 feet. To use this speed, you can’t be wearing medium or heavy armor.",
+      "name": "Aarakocra",
+      "size": 3,
+      "size_description": "Aarakocra are about 5 feet tall. They have thin, lightweight bodies that weigh between 80 and 100 pounds. Your size is Medium.",
+      "speed": 25,
+      "speed_description": "Your base walking speed is 25 feet.",
+      "source": 10,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Race",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "age": "Dwarves mature at the same rate as humans, but they're considered young until they reach the age of 50. On average, they live about 350 years.",
+      "alignment": "Most dwarves are lawful, believing firmly in the benefits of a well-ordered society. They tend toward good as well, with a strong sense of fair play and a belief that everyone deserves to share in the benefits of a just order.",
+      "name": "Dwarf",
+      "size": 3,
+      "size_description": "Dwarves stand between 4 and 5 feet tall and average about 150 pounds. Your size is Medium.",
+      "speed": 25,
+      "speed_description": "Your base walking speed is 25 feet. Your speed is not reduced by wearing heavy armor.",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Race",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "age": "Humans reach adulthood in their late teens and live less than a century.",
+      "alignment": "Humans tend toward no particular alignment. The best and the worst are found among them.",
+      "name": "Human",
+      "size": 3,
+      "size_description": "Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.",
+      "speed": 30,
+      "speed_description": "Your base walking speed is 30 feet.",
+      "source": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Race",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "age": "Tabaxi have lifespans equivalent to humans.",
+      "alignment": "Tabaxi tend toward chaotic alignments, as they let impulse and fancy guide their decisions. They are rarely evil, with most of them driven by curiosity rather than greed or other dark impulses.",
+      "climb_speed": 20,
+      "climb_speed_description": "Because of your claws, you have a climbing speed of 20 feet.",
+      "name": "Tabaxi",
+      "size": 3,
+      "size_description": "Tabaxi are taller on average than humans and relatively slender. Your size is Medium.",
+      "speed": 30,
+      "speed_description": "Your base walking speed is 30 feet.",
+      "source": 17,
+      "updated_at": "2020-01-20 00:00"
+    }
+  }
+]

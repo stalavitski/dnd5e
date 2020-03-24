@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from characters.data import PROFICIENCY_EXP, PROFICIENCY_PROF
+from characters.data import PROFICIENCY_EXP, PROFICIENCY_NONE, PROFICIENCY_PROF
 from characters.models import (
     Background,
     Character,
@@ -12,6 +12,7 @@ from characters.models import (
 )
 from core.data import ABILITY_DEXTERITY, ABILITY_DICT
 from core.models import Skill
+from creatures.models import Race, RacialSkill, RacialAbility
 
 
 class BackgroundTestCase(TestCase):
@@ -32,6 +33,8 @@ class CharacterTestCase(TestCase):
         '0002_skills.json',
         '0001_levels.json',
         '0002_backgrounds.json',
+        '0001_sizes.json',
+        '0005_races.json',
         '0003_characters.json',
         '0004_character_abilities.json'
     )
@@ -52,7 +55,7 @@ class CharacterTestCase(TestCase):
         }
 
         for dexterity, initiative in values_map.items():
-            character_dexterity.value = dexterity
+            character_dexterity.initial_value = dexterity
             character_dexterity.save()
             self.assertEqual(character.initiative, initiative)
             # Invalidate cache of cached_property
@@ -77,7 +80,8 @@ class CharacterTestCase(TestCase):
 
     def test__save__creates_default_relations__when_record_is_added(self):
         background = Background.objects.first()
-        character = Character(background=background, name='Test')
+        race = Race.objects.first()
+        character = Character(background=background, name='Test', race=race)
         self.assertTrue(character._state.adding)
         character.save()
         # Abilities are created
@@ -95,6 +99,9 @@ class CharacterAbilityTestCase(TestCase):
         '0001_sources.json',
         '0001_levels.json',
         '0002_backgrounds.json',
+        '0001_sizes.json',
+        '0005_races.json',
+        '0007_racial_abilities',
         '0003_characters.json',
         '0004_character_abilities.json'
     )
@@ -123,6 +130,27 @@ class CharacterAbilityTestCase(TestCase):
             character_ability.value = value
             self.assertEqual(character_ability.modifier, modifier)
 
+    def test__value__respects_racial_ability(self):
+        modifier = 2
+        character_ability = (
+            CharacterAbility.objects
+                .select_related('character', 'character__race')
+                .filter(initial_value=CharacterAbility.MIN_VALUE)
+                .first()
+        )
+        racial_ability = RacialAbility.objects.filter(
+            ability=character_ability.ability,
+            race=character_ability.character.race
+        ).first()
+        self.assertIsNone(racial_ability)
+        RacialAbility.objects.create(
+            ability=character_ability.ability,
+            race=character_ability.character.race,
+            value=modifier
+        )
+        expected_value = CharacterAbility.MIN_VALUE + modifier
+        self.assertEqual(character_ability.value, expected_value)
+
 
 class CharacterSavingThrowTestCase(TestCase):
     fixtures = (
@@ -130,6 +158,8 @@ class CharacterSavingThrowTestCase(TestCase):
         '0001_sources.json',
         '0001_levels.json',
         '0002_backgrounds.json',
+        '0001_sizes.json',
+        '0005_races.json',
         '0003_characters.json',
         '0004_character_abilities.json',
         '0006_character_saving_throws.json'
@@ -173,14 +203,20 @@ class CharacterSkillTestCase(TestCase):
         '0002_skills.json',
         '0001_levels.json',
         '0002_backgrounds.json',
+        '0001_sizes.json',
+        '0005_races.json',
+        '0008_racial_skills',
         '0003_characters.json',
         '0004_character_abilities.json',
         '0005_character_skills.json'
     )
 
     def test__str__returns_correct_value(self):
-        character_skill = CharacterSkill.objects.select_related('skill').first()
-        expected_value = character_skill.skill.name + ' Skill'
+        character_skill = CharacterSkill.objects.select_related('character', 'skill').first()
+        expected_value = 'Character: {}, Skill: {}'.format(
+            character_skill.character.name,
+            character_skill.skill.name
+        )
         self.assertEqual(str(character_skill), expected_value)
 
     # modifier tests
@@ -213,6 +249,26 @@ class CharacterSkillTestCase(TestCase):
         proficiency_bonus = character_skill.character.level.proficiency_bonus
         modifier += (proficiency_bonus * 2)
         self.assertEqual(character_skill.modifier, modifier)
+
+    # proficiency tests
+    def test__proficiency__respects_racial_skill(self):
+        character_skill = (
+            CharacterSkill.objects
+                .select_related('character', 'character__race', 'skill')
+                .filter(initial_proficiency=PROFICIENCY_NONE)
+                .first()
+        )
+        racial_skill = RacialSkill.objects.filter(
+            race=character_skill.character.race,
+            skill=character_skill.skill
+        ).first()
+        self.assertIsNone(racial_skill)
+        RacialSkill.objects.create(
+            proficiency=PROFICIENCY_EXP,
+            race=character_skill.character.race,
+            skill=character_skill.skill
+        )
+        self.assertEqual(character_skill.proficiency, PROFICIENCY_EXP)
 
 
 class ClassTestCase(TestCase):

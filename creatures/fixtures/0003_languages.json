@@ -1,0 +1,242 @@
+[
+  {
+    "model": "creatures.Language",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Abyssal",
+      "script_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Aquan",
+      "script_id": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Auran",
+      "script_id": 3,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Celestial",
+      "script_id": 4,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Common",
+      "script_id": 5,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Deep Speech",
+      "script_id": null,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 7,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Draconic",
+      "script_id": 3,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 8,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Druidic",
+      "script_id": null,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 9,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Dwarvish",
+      "script_id": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 10,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Elvish",
+      "script_id": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 11,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Giant",
+      "script_id": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 12,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Gnomish",
+      "script_id": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 13,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Goblin",
+      "script_id": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 14,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Gnoll",
+      "script_id": 5,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 15,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Halfling",
+      "script_id": 5,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 16,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Ignan",
+      "script_id": 3,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 17,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Infernal",
+      "script_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 18,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Orc",
+      "script_id": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 19,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Primordial",
+      "script_id": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 20,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Sylvan",
+      "script_id": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 21,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Terran",
+      "script_id": 6,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 22,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Undercommonn",
+      "script_id": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.Language",
+    "pk": 23,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "is_exotic": true,
+      "name": "Aarakocra",
+      "script_id": null,
+      "updated_at": "2020-01-20 00:00"
+    }
+  }
+]

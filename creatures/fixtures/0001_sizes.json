@@ -1,0 +1,68 @@
+[
+  {
+    "model": "creatures.Size",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Tiny",
+      "space": "2½ by 2½ ft.",
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  },
+  {
+    "model": "creatures.Size",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Small",
+      "space": "5 by 5 ft.",
+      "updated_at": "2020-01-20 00:00",
+      "value": 2
+    }
+  },
+  {
+    "model": "creatures.Size",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Medium",
+      "space": "5 by 5 ft.",
+      "updated_at": "2020-01-20 00:00",
+      "value": 3
+    }
+  },
+  {
+    "model": "creatures.Size",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Large",
+      "space": "10 by 10 ft.",
+      "updated_at": "2020-01-20 00:00",
+      "value": 4
+    }
+  },
+  {
+    "model": "creatures.Size",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Huge",
+      "space": "15 by 15 ft.",
+      "updated_at": "2020-01-20 00:00",
+      "value": 5
+    }
+  },
+  {
+    "model": "creatures.Size",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "name": "Gargantuan",
+      "space": "20 by 20 ft. or larger",
+      "updated_at": "2020-01-20 00:00",
+      "value": 6
+    }
+  }
+]
