@@ -6,7 +6,14 @@ from django.utils.functional import cached_property
 from django_paranoid.models import ParanoidModel
 from django_resized import ResizedImageField
 
-from characters.data import ALIGNMENT_CHOICES, GENDER_CHOICES, PROFICIENCY_CHOICES, PROFICIENCY_EXP, PROFICIENCY_NONE
+from characters.data import (
+    ALIGNMENT_CHOICES,
+    GENDER_CHOICES,
+    MAX_EXP,
+    PROFICIENCY_CHOICES,
+    PROFICIENCY_EXP,
+    PROFICIENCY_NONE
+)
 from characters.utils import get_proficiency_by_priority, portrait_upload_to
 from core.data import ABILITY_CHOICES, ABILITY_DEXTERITY, ABILITY_DICT
 from core.models import Skill
@@ -22,8 +29,10 @@ class Background(ParanoidModel):
 
 
 class Character(ParanoidModel):
+    BASE_ARMOR = 10
+
     background = models.ForeignKey('characters.Background', models.CASCADE, 'characters', blank=True, null=True)
-    experience = models.IntegerField(default=0, validators=[MinValueValidator(0), MaxValueValidator(355000)])
+    experience = models.IntegerField(default=0, validators=(MinValueValidator(0), MaxValueValidator(MAX_EXP)))
     name = models.CharField(blank=True, max_length=50)
     race = models.ForeignKey('creatures.Race', models.CASCADE, 'characters')
     skills = models.ManyToManyField('core.Skill', 'characters', through='characters.CharacterSkill')
@@ -32,13 +41,16 @@ class Character(ParanoidModel):
         return self.name
 
     @cached_property
-    def armor_class(self): # pragma: no cover
-        # @TODO temp
-        return 10
+    def armor_class(self):
+        return self.BASE_ARMOR + self.dex_modifier
+
+    @cached_property
+    def dex_modifier(self):
+        return self.character_abilities.get(ability=ABILITY_DEXTERITY).modifier
 
     @cached_property
     def initiative(self):
-        return self.character_abilities.get(ability=ABILITY_DEXTERITY).modifier
+        return self.dex_modifier
 
     @cached_property
     def level(self):
@@ -67,9 +79,8 @@ class Character(ParanoidModel):
             CharacterDetails.objects.create(character=self, player_id=1)
 
     @cached_property
-    def speed(self): # pragma: no cover
-        # @TODO temp
-        return 30
+    def speed(self):
+        return self.race.speed
 
 
 class CharacterAbility(ParanoidModel):
@@ -80,12 +91,12 @@ class CharacterAbility(ParanoidModel):
     ability = models.CharField(choices=ABILITY_CHOICES, max_length=3)
     initial_value = models.IntegerField(
         default=MIN_VALUE,
-        validators=[MinValueValidator(MIN_VALUE), MaxValueValidator(MAX_VALUE)]
+        validators=(MinValueValidator(MIN_VALUE), MaxValueValidator(MAX_VALUE))
     )
     character = models.ForeignKey('characters.Character', models.CASCADE, 'character_abilities')
 
     class Meta:
-        unique_together = [['ability', 'character']]
+        unique_together = (('ability', 'character'),)
 
     def __str__(self):
         return '{} Ability'.format(self.ability_name)
@@ -159,7 +170,7 @@ class CharacterSkill(ParanoidModel):
     skill = models.ForeignKey('core.Skill', models.CASCADE, 'character_skills')
 
     class Meta:
-        unique_together = [['character', 'skill']]
+        unique_together = (('character', 'skill'),)
 
     def __str__(self):
         return 'Character: {}, Skill: {}'.format(self.character.name, self.skill.name)
@@ -198,9 +209,9 @@ class Class(ParanoidModel):
 
 
 class Level(ParanoidModel):
-    proficiency_bonus = models.IntegerField(validators=[MinValueValidator(2), MaxValueValidator(6)])
-    required_experience = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(355000)])
-    value = models.IntegerField(unique=True, validators=[MinValueValidator(1), MaxValueValidator(20)])
+    proficiency_bonus = models.IntegerField(validators=(MinValueValidator(2), MaxValueValidator(6)))
+    required_experience = models.IntegerField(validators=(MinValueValidator(0), MaxValueValidator(MAX_EXP)))
+    value = models.IntegerField(unique=True, validators=(MinValueValidator(1), MaxValueValidator(20)))
 
     def __str__(self):
         return str(self.value)

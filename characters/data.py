@@ -32,6 +32,8 @@ GENDER_DICT = {
 
 GENDER_CHOICES = tuple((key, value) for key, value in GENDER_DICT.items())
 
+MAX_EXP = 355000
+
 PROFICIENCY_NONE = 'none'
 PROFICIENCY_PROF = 'proficiency'
 PROFICIENCY_EXP = 'expertise'

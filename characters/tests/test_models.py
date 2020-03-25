@@ -12,7 +12,7 @@ from characters.models import (
 )
 from core.data import ABILITY_DEXTERITY, ABILITY_DICT
 from core.models import Skill
-from creatures.models import Race, RacialSkill, RacialAbility
+from creatures.models import Race, RacialAbility, RacialSkill
 
 
 class BackgroundTestCase(TestCase):
@@ -43,6 +43,17 @@ class CharacterTestCase(TestCase):
         character = Character.objects.first()
         self.assertEqual(str(character), character.name)
 
+    def test__armor_class__returns_correct_value(self):
+        character = Character.objects.first()
+        character_dexterity_modifier = character.character_abilities.get(ability=ABILITY_DEXTERITY).modifier
+        expected_result = character_dexterity_modifier + Character.BASE_ARMOR
+        self.assertEqual(character.armor_class, expected_result)
+
+    def test__dex_modifier__returns_correct_value(self):
+        character = Character.objects.first()
+        character_dexterity_modifier = character.character_abilities.get(ability=ABILITY_DEXTERITY).modifier
+        self.assertEqual(character.dex_modifier, character_dexterity_modifier)
+
     def test__initiative__returns_correct_value(self):
         character = Character.objects.first()
         character_dexterity = character.character_abilities.get(ability=ABILITY_DEXTERITY)
@@ -58,8 +69,9 @@ class CharacterTestCase(TestCase):
             character_dexterity.initial_value = dexterity
             character_dexterity.save()
             self.assertEqual(character.initiative, initiative)
-            # Invalidate cache of cached_property
+            # Invalidate cache of cached properties
             del character.initiative
+            del character.dex_modifier
 
     def test__level__returns_correct_object(self):
         character = Character.objects.first()
@@ -91,6 +103,10 @@ class CharacterTestCase(TestCase):
         self.assertEqual(character.character_skills.count(), skills_count)
         # Details is created
         self.assertIsNotNone(character.details)
+
+    def test__speed__returns_correct_value(self):
+        character = Character.objects.select_related('race').first()
+        self.assertEqual(character.speed, character.race.speed)
 
 
 class CharacterAbilityTestCase(TestCase):
