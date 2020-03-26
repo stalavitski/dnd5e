@@ -1,0 +1,72 @@
+[
+  {
+    "model": "creatures.RacialFeature",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "feature_id": 1,
+      "race_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialFeature",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "feature_id": 2,
+      "race_id": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialFeature",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "feature_id": 3,
+      "race_id": 2,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialFeature",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "feature_id": 4,
+      "race_id": 3,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialFeature",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "feature_id": 5,
+      "race_id": 4,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialFeature",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "feature_id": 6,
+      "race_id": 4,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "creatures.RacialFeature",
+    "pk": 7,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "feature_id": 7,
+      "race_id": 4,
+      "updated_at": "2020-01-20 00:00"
+    }
+  }
+]

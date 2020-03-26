@@ -1,0 +1,132 @@
+[
+  {
+    "model": "core.DamageType",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "The corrosive spray of a black dragon’s breath and the dissolving enzymes secreted by a Black Pudding deal acid damage.",
+      "name": "Acid",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Blunt force attacks—hammers, Falling, constriction, and the like—deal bludgeoning damage.",
+      "name": "Bludgeoning",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "The Infernal chill radiating from an Ice Devil’s spear and the frigid blast of a white dragon’s breath deal cold damage.",
+      "name": "Cold",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Red Dragons breathe fire, and many Spells conjure flames to deal fire damage.",
+      "name": "Fire",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Force is pure magical energy focused into a damaging form. Most Effects that deal force damage are Spells, including Magic Missile and Spiritual Weapon.",
+      "name": "Force",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "A Lightning Bolt spell and a blue dragon’s breath deal lightning damage.",
+      "name": "Lightning",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 7,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Necrotic damage, dealt by certain Undead and a spell such as Chill Touch, withers matter and even the soul.",
+      "name": "Necrotic",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 8,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Puncturing and impaling attacks, including spears and monsters’ bites, deal piercing damage.",
+      "name": "Piercing",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 9,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Venomous stings and the toxic gas of a green dragon’s breath deal poison damage.",
+      "name": "Poison",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 10,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Mental Abilities such as a mind flayer’s psionic blast deal psychic damage.",
+      "name": "Psychic",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 11,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Radiant damage, dealt by a cleric’s Flame Strike spell or an angel’s smiting weapon, sears the flesh like fire and overloads the spirit with power.",
+      "name": "Radiant",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 12,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Swords, axes, and monsters’ claws deal slashing damage.",
+      "name": "Slashing",
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.DamageType",
+    "pk": 13,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "A concussive burst of sound, such as the effect of the Thunderwave spell, deals thunder damage.",
+      "name": "Thunder",
+      "updated_at": "2020-01-20 00:00"
+    }
+  }
+]

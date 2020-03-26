@@ -1,0 +1,79 @@
+[
+  {
+    "model": "core.Feature",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "You are proficient with your unarmed strikes, which deal 1d4 slashing damage on a hit.",
+      "name": "Talons",
+      "source_id": 10,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.Feature",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "You gain proficiency with the artisan's tools of your choice: smith's tools, brewer's supplies, or mason's tools.",
+      "name": "Tool Proficiency",
+      "source_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.Feature",
+    "pk": 3,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
+      "name": "Stonecunning",
+      "source_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.Feature",
+    "pk": 4,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+      "name": "Languages",
+      "source_id": 1,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.Feature",
+    "pk": 5,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Your reflexes and agility allow you to move with a burst of speed. When you move on your tum in combat, you can double your speed until the end of the tum. Once you use this trait, you can't use it again until you move O feet on one of your turns.",
+      "name": "Feline Agility",
+      "source_id": 17,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.Feature",
+    "pk": 6,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Because of your claws, you have a climbing speed of 20 feet. In addition, your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.",
+      "name": "Cat's Claws",
+      "source_id": 17,
+      "updated_at": "2020-01-20 00:00"
+    }
+  },
+  {
+    "model": "core.Feature",
+    "pk": 7,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "You can speak, read, and write Common and one other language of your choice.",
+      "name": "Languages",
+      "source_id": 17,
+      "updated_at": "2020-01-20 00:00"
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "model": "creatures.RacialSense",
+    "pk": 1,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+      "race_id": 2,
+      "sense_id": 2,
+      "updated_at": "2020-01-20 00:00",
+      "value": 60
+    }
+  },
+  {
+    "model": "creatures.RacialSense",
+    "pk": 2,
+    "fields": {
+      "created_at": "2020-01-20 00:00",
+      "description": "You have a cat's keen senses, especially in the dark. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+      "race_id": 4,
+      "sense_id": 2,
+      "updated_at": "2020-01-20 00:00",
+      "value": 60
+    }
+  }
+]
