@@ -1,0 +1,112 @@
+[
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 1,
+    "fields": {
+      "ability": "dex",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 1,
+      "updated_at": "2020-01-20 00:00",
+      "value": 2
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 2,
+    "fields": {
+      "ability": "wis",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 1,
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 3,
+    "fields": {
+      "ability": "str",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 2,
+      "updated_at": "2020-01-20 00:00",
+      "value": 2
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 4,
+    "fields": {
+      "ability": "con",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 2,
+      "updated_at": "2020-01-20 00:00",
+      "value": 2
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 5,
+    "fields": {
+      "ability": "str",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 3,
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 6,
+    "fields": {
+      "ability": "dex",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 3,
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 7,
+    "fields": {
+      "ability": "con",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 3,
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 8,
+    "fields": {
+      "ability": "int",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 3,
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 9,
+    "fields": {
+      "ability": "wis",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 3,
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  },
+  {
+    "model": "creatures.RacialAbility",
+    "pk": 10,
+    "fields": {
+      "ability": "cha",
+      "created_at": "2020-01-20 00:00",
+      "race_id": 3,
+      "updated_at": "2020-01-20 00:00",
+      "value": 1
+    }
+  }
+]

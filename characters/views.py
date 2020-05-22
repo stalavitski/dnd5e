@@ -52,9 +52,13 @@ class CharacterSkillViewSet(mixins.UpdateModelMixin, mixins.ListModelMixin, view
 
     def get_queryset(self): # pragma: no cover
         character_id = self.kwargs.get('character_id')
-        return CharacterSkill.objects.select_related('character', 'skill').filter(character_id=character_id)
+        return (
+            CharacterSkill.objects
+                .select_related('character', 'character__race', 'skill')
+                .filter(character_id=character_id)
+        )
 
 
 class CharacterViewSet(viewsets.ModelViewSet):
-    queryset = Character.objects.all()
+    queryset = Character.objects.select_related('background', 'race').all()
     serializer_class = CharacterSerializer

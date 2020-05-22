@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     # Local apps
     'characters',
     'core',
-    'users',
+    'creatures',
+    'users'
 ]
 
 MIDDLEWARE = [

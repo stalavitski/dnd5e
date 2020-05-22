@@ -5,7 +5,9 @@ from characters.models import Character, CharacterAbility, CharacterDetails, Cha
 
 class CharacterAbilitySerializer(serializers.ModelSerializer):
     ability = serializers.CharField(read_only=True, source='ability_name')
+    initial_value = serializers.IntegerField(write_only=True)
     modifier = serializers.IntegerField(read_only=True)
+    value = serializers.IntegerField(read_only=True)
 
     class Meta:
         exclude = ('character', 'created_at', 'deleted_at', 'updated_at')
@@ -42,6 +44,7 @@ class CharacterSerializer(serializers.ModelSerializer):
     initiative = serializers.IntegerField(read_only=True)
     level = serializers.IntegerField(read_only=True, source='level.value')
     proficiency_bonus = serializers.IntegerField(read_only=True, source='level.proficiency_bonus')
+    race_name = serializers.CharField(read_only=True, source='race.name')
     speed = serializers.IntegerField(read_only=True)
 
     class Meta:
@@ -51,6 +54,8 @@ class CharacterSerializer(serializers.ModelSerializer):
 
 class CharacterSkillSerializer(serializers.ModelSerializer):
     modifier = serializers.IntegerField(read_only=True)
+    initial_proficiency = serializers.IntegerField(write_only=True)
+    proficiency = serializers.CharField(read_only=True)
     skill = serializers.CharField(read_only=True, source='skill.name')
 
     class Meta:

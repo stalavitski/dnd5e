@@ -1,6 +1,22 @@
 from django.test import TestCase
 
-from core.models import Dice, Feature, Skill, Source
+from core.models import Condition, DamageType, Dice, Feature, Skill, Source
+
+
+class ConditionTestCase(TestCase):
+    fixtures = ('0005_conditions.json',)
+
+    def test__str__returns_correct_value(self):
+        condition = Condition.objects.first()
+        self.assertEqual(str(condition), condition.name)
+
+
+class DamageTypeTestCase(TestCase):
+    fixtures = ('0004_damage_types.json',)
+
+    def test__str__returns_correct_value(self):
+        damage_type = DamageType.objects.first()
+        self.assertEqual(str(damage_type), damage_type.name)
 
 
 class DiceTestCase(TestCase):

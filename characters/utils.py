@@ -3,6 +3,16 @@ import os
 from django.conf import settings
 from djangorestframework_camel_case.util import camel_to_underscore
 
+from characters.data import PROFICIENCY_EXP, PROFICIENCY_NONE, PROFICIENCY_PROF
+
+
+def get_proficiency_by_priority(*proficiencies):
+    if PROFICIENCY_EXP in proficiencies:
+        return PROFICIENCY_EXP
+    elif PROFICIENCY_PROF in proficiencies:
+        return PROFICIENCY_PROF
+    return PROFICIENCY_NONE
+
 
 def portrait_upload_to(instance, file_name):
     class_name = camel_to_underscore(instance.__class__.__name__).strip('_')

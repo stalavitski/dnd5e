@@ -1,10 +1,28 @@
 import random
 
+from django.contrib.postgres.fields import JSONField
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django_paranoid.models import ParanoidModel
 
 from core.data import ABILITY_CHOICES
+
+
+class Condition(ParanoidModel):
+    effects = JSONField()
+    levels = JSONField(blank=True, null=True)
+    name = models.CharField(max_length=20, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+class DamageType(ParanoidModel):
+    description = models.TextField()
+    name = models.CharField(max_length=20, unique=True)
+
+    def __str__(self):
+        return self.name
 
 
 class Dice(ParanoidModel):
@@ -18,7 +36,8 @@ class Dice(ParanoidModel):
 
 
 class Feature(ParanoidModel):
-    name = models.CharField(max_length=15, unique=True)
+    description = models.TextField()
+    name = models.CharField(max_length=50)
     source = models.ForeignKey('core.Source', models.CASCADE, 'features')
 
     def __str__(self):

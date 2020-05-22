@@ -4,8 +4,9 @@ from pathlib import Path
 from django.conf import settings
 from django.test import TestCase
 
+from characters.data import PROFICIENCY_EXP, PROFICIENCY_NONE, PROFICIENCY_PROF
 from characters.models import CharacterDetails
-from characters.utils import portrait_upload_to
+from characters.utils import get_proficiency_by_priority, portrait_upload_to
 
 
 class CharacterUtilsTestCase(TestCase):
@@ -18,6 +19,20 @@ class CharacterUtilsTestCase(TestCase):
             f.write('test')
             f.close()
 
+    # get_proficiency_by_priority tests
+    def test__get_proficiency_by_priority__returns_none__when_it_is_only_option(self):
+        result = get_proficiency_by_priority(PROFICIENCY_NONE, PROFICIENCY_NONE, PROFICIENCY_NONE)
+        self.assertEqual(result, PROFICIENCY_NONE)
+
+    def test__get_proficiency_by_priority__returns_prof__when_it_is_passed_and_no_exp_passed(self):
+        result = get_proficiency_by_priority(PROFICIENCY_NONE, PROFICIENCY_PROF, PROFICIENCY_NONE)
+        self.assertEqual(result, PROFICIENCY_PROF)
+
+    def test__get_proficiency_by_priority__returns_exp__if_it_is_passed(self):
+        result = get_proficiency_by_priority(PROFICIENCY_EXP, PROFICIENCY_PROF, PROFICIENCY_NONE)
+        self.assertEqual(result, PROFICIENCY_EXP)
+
+    # portrait_upload_to tests
     def test__portrait_upload_to__returns_correct_path(self):
         character_details = CharacterDetails(id=0)
         file_name = '{}.png'.format(character_details.id)
